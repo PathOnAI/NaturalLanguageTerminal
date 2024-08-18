@@ -1,0 +1,8 @@
+// tsconfig.json
+{
+	"include": [ "src/**/*" ],
+	"compilerOptions": {
+		"outDir": "./dist",
+		"module": "nodenext"
+	}
+}
