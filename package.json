@@ -1,19 +1,19 @@
 {
-  "name": "nls",
-  "version": "1.0.0",
-  "description": "Natural Language Shell - AI-powered command-line tool",
-  "main": "index.js",
+  "name": "nls-cli",
+  "version": "1.0.1",
+  "description": "Natural Language Shell - Natural language approach to using the shell",
+  "main": "dist/index.js",
   "bin": {
     "nls": "./dist/index.js"
   },
   "scripts": {
     "build": "tsc",
-    "start": "node dist/index.js",
-    "prepublishOnly": "npm run build"
+    "start": "node --no-deprecation dist/index.js",
+    "prepublishOnly": "npm install && npm run build"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["cli", "ai", "shell", "natural-language"],
+  "author": "Balaji Rama <balajirw10@gmail.com>",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.5.2",
     "ts-node": "^10.9.2",
@@ -22,5 +22,13 @@
   "dependencies": {
     "dotenv": "^16.4.5",
     "openai": "^4.57.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PathOnAI/NLS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PathOnAI/NLS/issues"
+  },
+  "homepage": "https://github.com/PathOnAI/NLS"
 }
