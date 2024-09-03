@@ -1,34 +1,215 @@
-## Table of contents
-<!-- toc -->
+<p align="center">
+  <img src="nls.png" width="60%" alt="NLS-logo">
+</p>
+<p align="center">
+    <h1 align="center">NLS</h1>
+</p>
+<p align="center">
+    <em>Command the Shell with Natural Language Precision</em>
+</p>
+<p align="center">
+	<!-- local repository, no metadata badges. --></p>
+<p align="center">
+		<em>Built with the tools and technologies:</em>
+</p>
+<p align="center">
+	<img src="https://img.shields.io/badge/OpenAI-412991.svg?style=flat-square&logo=OpenAI&logoColor=white" alt="OpenAI">
+	<img src="https://img.shields.io/badge/TypeScript-3178C6.svg?style=flat-square&logo=TypeScript&logoColor=white" alt="TypeScript">
+	<img src="https://img.shields.io/badge/tsnode-3178C6.svg?style=flat-square&logo=ts-node&logoColor=white" alt="tsnode">
+	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat-square&logo=JSON&logoColor=white" alt="JSON">
+</p>
 
-<!-- tocstop -->
+<br>
 
-## Usage
-<!-- usage -->
-```sh-session
-$ npm install -g nls
-$ nls COMMAND
-running command...
-$ nls (--version)
-nls/1.0.0 darwin-x64 node-v21.1.0
-$ nls --help [COMMAND]
-USAGE
-  $ nls COMMAND
-...
+<details><summary>Table of Contents</summary>
+
+- [📍 Overview](#-overview)
+- [👾 Features](#-features)
+- [📂 Repository Structure](#-repository-structure)
+- [🧩 Modules](#-modules)
+- [🚀 Getting Started](#-getting-started)
+    - [🔖 Prerequisites](#-prerequisites)
+    - [📦 Installation](#-installation)
+    - [🤖 Usage](#-usage)
+    - [🧪 Tests](#-tests)
+- [📌 Project Roadmap](#-project-roadmap)
+- [🤝 Contributing](#-contributing)
+- [🎗 License](#-license)
+- [🙌 Acknowledgments](#-acknowledgments)
+
+</details>
+<hr>
+
+## 📍 Overview
+
+The Natural Language Shell (NLS) project is a Node.js-based tool designed to interpret and execute natural language commands as shell commands. Leveraging OpenAIs GPT-4 model, NLS translates user inputs into executable instructions, providing a seamless and intuitive command-line interface. The project ensures stability and reproducibility through strict dependency management and TypeScript configuration. By integrating AI-powered functionalities and robust command-line operations, NLS enhances user interaction and automates tasks efficiently, making it a valuable asset for developers seeking to streamline their workflows with natural language processing capabilities.
+
+---
+
+## 👾 Features
+
+|    |   Feature         | Description |
+|----|-------------------|---------------------------------------------------------------|
+| ⚙️  | **Architecture**  | The project follows a modular architecture with distinct components for CLI, AI integration, and shell command execution. |
+| 🔩 | **Code Quality**  | The codebase uses TypeScript, ensuring type safety and maintainability. The structure is clean with well-defined modules. |
+| 📄 | **Documentation** | Documentation is present in the form of comments within the code. However, there is no mention of external documentation or README files. |
+| 🔌 | **Integrations**  | Integrates with OpenAI's GPT-4 model for natural language processing and uses dotenv for environment variable management. |
+| 🧩 | **Modularity**    | Highly modular with separate files for CLI, AI, shell execution, and configuration, promoting reusability and maintainability. |
+| 🧪 | **Testing**       | No specific testing frameworks or tools mentioned. Testing practices are not detailed in the provided information. |
+| ⚡️  | **Performance**   | Performance is optimized for asynchronous shell command execution and efficient handling of AI responses. |
+| 🛡️ | **Security**      | Uses dotenv for secure management of environment variables, ensuring sensitive data like API keys are protected. |
+| 📦 | **Dependencies**  | Key dependencies include TypeScript, @types/node, ts-node, OpenAI, dotenv, and various npm packages for managing the project. |
+| 🚀 | **Scalability**   | The architecture supports scalability by separating concerns into different modules, allowing for easier scaling and maintenance. |
+
+---
+
+## 📂 Repository Structure
+
+```sh
+└── nls/
+    ├── package-lock.json
+    ├── package.json
+    ├── src
+    │   ├── ai.ts
+    │   ├── cli.ts
+    │   ├── config.ts
+    │   ├── index.ts
+    │   └── shell.ts
+    └── tsconfig.json
 ```
-<!-- usagestop -->
 
-## Commands
-<!-- commands -->
-* [`nls hello`](#nls-hello)
+---
 
-## `nls hello`
+## 🧩 Modules
 
+<details closed><summary>.</summary>
+
+| File | Summary |
+| --- | --- |
+| [package-lock.json](/Users/rama2r/nls/package-lock.json) | Summary of `package-lock.json`The `package-lock.json` file in the `nls` repository serves as a critical component for managing the projects dependencies. It ensures that the exact versions of the packages used during development are locked down, providing consistency across different environments. This file is automatically generated and updated by npm, reflecting the entire dependency tree, including nested dependencies. By doing so, it guarantees that the project remains stable and reproducible, preventing potential issues caused by version discrepancies. This is particularly important in the context of the `nls` repository, which appears to be a Node.js-based project with various modules under the `src` directory, such as `ai.ts`, `cli.ts`, `config.ts`, `index.ts`, and `shell.ts`. |
+| [package.json](/Users/rama2r/nls/package.json) | Define the projects metadata and dependencies, facilitating the build and execution of the Natural Language Shell (NLS) tool. Enable TypeScript compilation, script execution, and package management, ensuring seamless integration with AI-powered functionalities and command-line operations. |
+| [tsconfig.json](/Users/rama2r/nls/tsconfig.json) | Configure TypeScript compiler options to ensure compatibility with ES2016, enable CommonJS module generation, enforce strict type-checking, and facilitate interoperability with CommonJS modules. Specify output directory for emitted files and skip type checking for declaration files to streamline the build process. |
+
+</details>
+
+<details closed><summary>src</summary>
+
+| File | Summary |
+| --- | --- |
+| [cli.ts](/Users/rama2r/nls/src/cli.ts) | Facilitates user interaction by interpreting natural language commands and executing corresponding shell commands. Integrates command interpretation and execution functionalities, providing a user-friendly interface for command-line operations within the repositorys architecture. |
+| [shell.ts](/Users/rama2r/nls/src/shell.ts) | Facilitates the execution of shell commands asynchronously, providing a promise-based interface for handling command output and errors. Integrates seamlessly within the repositorys architecture to support various functionalities requiring command-line interactions, enhancing the overall capability of the system to perform automated tasks and operations. |
+| [ai.ts](/Users/rama2r/nls/src/ai.ts) | Interpret natural language commands by leveraging OpenAIs GPT-4 model to generate corresponding shell commands, enhancing the repositorys functionality for translating user inputs into executable shell instructions. |
+| [index.ts](/Users/rama2r/nls/src/index.ts) | Initialize the command-line interface by capturing user arguments and invoking the runCLI function. Handle any unhandled errors by logging them and exiting the process. This entry point integrates various components of the repository, facilitating user interaction through the CLI. |
+| [config.ts](/Users/rama2r/nls/src/config.ts) | Configure the OpenAI client by loading environment variables using dotenv, enabling secure access to the OpenAI API within the repositorys architecture. |
+
+</details>
+
+---
+
+## 🚀 Getting Started
+
+### 🔖 Prerequisites
+
+**TypeScript**: `version x.y.z`
+
+### 📦 Installation
+
+Build the project from source:
+
+1. Clone the nls repository:
+```sh
+❯ git clone /Users/rama2r/nls
 ```
-USAGE
-  $ nls hello [--flag]
 
-FLAGS
-  --flag
+2. Navigate to the project directory:
+```sh
+❯ cd nls
 ```
-<!-- commandsstop -->
+
+3. Install the required dependencies:
+```sh
+❯ npm install
+```
+
+### 🤖 Usage
+
+To run the project, execute the following command:
+
+```sh
+❯ npm run build && node dist/index.js
+```
+
+### 🧪 Tests
+
+Execute the test suite using the following command:
+
+```sh
+❯ npm test
+```
+
+---
+
+## 📌 Project Roadmap
+
+- [X] **`Task 1`**: <strike>Implement feature one.</strike>
+- [ ] **`Task 2`**: Implement feature two.
+- [ ] **`Task 3`**: Implement feature three.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Here are several ways you can contribute:
+
+- **[Report Issues](https://LOCAL/rama2r/nls/issues)**: Submit bugs found or log feature requests for the `nls` project.
+- **[Submit Pull Requests](https://LOCAL/rama2r/nls/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+- **[Join the Discussions](https://LOCAL/rama2r/nls/discussions)**: Share your insights, provide feedback, or ask questions.
+
+<details closed>
+<summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your LOCAL account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone /Users/rama2r/nls
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to LOCAL**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
+
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://LOCAL{/rama2r/nls/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=rama2r/nls">
+   </a>
+</p>
+</details>
+
+---
+
+## 🎗 License
+
+This project is protected under the [SELECT-A-LICENSE](https://choosealicense.com/licenses) License. For more details, refer to the [LICENSE](https://choosealicense.com/licenses/) file.
+
+---
+
+## 🙌 Acknowledgments
+
+- List any resources, contributors, inspiration, etc. here.
+
+---
