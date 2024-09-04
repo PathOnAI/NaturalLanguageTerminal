@@ -118,7 +118,7 @@ Build the project from source:
 
 1. Clone the nls repository:
 ```sh
-❯ git clone /Users/rama2r/nls
+❯ git clone https://github.com/PathOnAI/NLS.git
 ```
 
 2. Navigate to the project directory:
@@ -171,7 +171,7 @@ Contributions are welcome! Here are several ways you can contribute:
 1. **Fork the Repository**: Start by forking the project repository to your LOCAL account.
 2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
    ```sh
-   git clone /Users/rama2r/nls
+   git clone https://github.com/PathOnAI/NLS.git
    ```
 3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
    ```sh
