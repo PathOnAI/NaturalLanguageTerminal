@@ -32,3 +32,5 @@ export async function setupCommand(): Promise<void> {
   saveConfig(newConfig);
   console.log(chalk.green('Setup complete. Configuration saved.'));
 }
+
+
