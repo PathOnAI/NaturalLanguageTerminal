@@ -16,38 +16,25 @@
 	<img src="https://img.shields.io/badge/JSON-000000.svg?style=flat-square&logo=JSON&logoColor=white" alt="JSON">
 </p>
 
-# NLS Git AutoCommit
-repo owner: Balaji Rama (balajirw10@gmail.com)
+<br>
 
-This package provides a command-line tool for automatically generating commit messages using an LLM based on git diffs.
+<details><summary>Table of Contents</summary>
 
-## Installation
+- [📍 Overview](#-overview)
+- [👾 Features](#-features)
+- [📂 Repository Structure](#-repository-structure)
+- [🧩 Modules](#-modules)
+- [🚀 Getting Started](#-getting-started)
+    - [🔖 Prerequisites](#-prerequisites)
+    - [📦 Installation](#-installation)
+    - [🤖 Usage](#-usage)
+    - [🧪 Tests](#-tests)
+- [📌 Project Roadmap](#-project-roadmap)
+- [🤝 Contributing](#-contributing)
+- [🎗 License](#-license)
+- [🙌 Acknowledgments](#-acknowledgments)
 
-1. Clone this repository
-2. Navigate to the project directory
-3. Run `pip install .`
-
-## Usage
-
-1. Create a new NLS environment:
-   ```
-   python -m nls myenv
-   ```
-
-2. Activate the NLS environment:
-   ```
-   source myenv/bin/activate
-   ```
-
-3. Use git autocommit:
-   ```
-   git autocommit
-   ```
-
-4. Deactivate the NLS environment when you're done:
-   ```
-   deactivate
-   ```
+</details>
 
 Make sure to set your OpenAI API key as an environment variable:
 ```
