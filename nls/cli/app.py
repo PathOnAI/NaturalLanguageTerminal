@@ -23,9 +23,10 @@ def init():
     
     config = {
         "API_KEYS": {
-            "OPENAI": None,
-            "GROQ": None
+            "OPENAI_API_KEY": None,
+            # "GROQ_API_KEY": None
         },
+        "LLM_OPTIONS": ["gpt-4", "gpt-3.5-turbo", "gpt-4-turbo-preview"],
         "CURRENT_LLM": None
     }
     
@@ -35,8 +36,7 @@ def init():
         value = Prompt.ask(f"Enter your {api} API key", default="")
         config["API_KEYS"][api] = value if value else None
     
-    llm_options = list(config["API_KEYS"].keys())
-    current_llm = Prompt.ask("Choose your default LLM", choices=llm_options, default=llm_options[0])
+    current_llm = Prompt.ask("Choose your default LLM", choices=config["LLM_OPTIONS"], default=config["LLM_OPTIONS"][0])
     config["CURRENT_LLM"] = current_llm
     
     with open(CONFIG_FILE, 'w') as f:
@@ -55,7 +55,7 @@ def create(env_name: str):
     """Create a new NLS environment."""
     if not check_init():
         console.print("[bold red]Error: NLS is not initialized.[/bold red]")
-        console.print("Please run [cyan]nls init[/cyan] first to set up your configuration.")
+        console.print("Please run [cyan]@nls init[/cyan] first to set up your configuration.")
         return
 
     with Progress(
@@ -81,7 +81,7 @@ def config():
     """View or edit the current configuration."""
     if not check_init():
         console.print("[bold red]Error: NLS is not initialized.[/bold red]")
-        console.print("Please run [cyan]nls init[/cyan] first to set up your configuration.")
+        console.print("Please run [cyan]@nls init[/cyan] first to set up your configuration.")
         return
 
     with open(CONFIG_FILE, 'r') as f:
@@ -95,8 +95,7 @@ def config():
             value = Prompt.ask(f"Enter your {api} API key", default=config["API_KEYS"][api] or "")
             config["API_KEYS"][api] = value if value else None
         
-        llm_options = list(config["API_KEYS"].keys())
-        current_llm = Prompt.ask("Choose your default LLM", choices=llm_options, default=config["CURRENT_LLM"])
+        current_llm = Prompt.ask("Choose your default LLM", choices=config["LLM_OPTIONS"], default=config["CURRENT_LLM"])
         config["CURRENT_LLM"] = current_llm
         
         with open(CONFIG_FILE, 'w') as f:

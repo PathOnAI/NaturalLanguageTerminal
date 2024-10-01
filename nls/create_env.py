@@ -28,7 +28,8 @@ def create_nls_environment(env_name):
         scripts = [
             ('activate_template.sh', 'activate'),
             ('end_template.sh', 'nls_end'),
-            ('interceptor.sh', 'interceptor.sh')
+            ('interceptor.sh', 'interceptor.sh'),
+            ('env_setter.sh', 'env_setter.sh')
         ]
 
     for template, new_name in scripts:
