@@ -1,4 +1,5 @@
 # NLS Git AutoCommit
+repo owner: Balaji Rama (balajirw10@gmail.com)
 
 This package provides a command-line tool for automatically generating commit messages using an LLM based on git diffs.
 
