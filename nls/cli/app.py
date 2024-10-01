@@ -1,4 +1,5 @@
 import typer
+import time
 import os
 import json
 from rich.console import Console
@@ -63,9 +64,20 @@ def create(env_name: str):
         TextColumn("[progress.description]{task.description}"),
         transient=True,
     ) as progress:
-        progress.add_task(description="Creating NLS environment...", total=None)
-        create_nls_environment(env_name)
+        task = progress.add_task(description="Creating NLS environment...", total=None)
+        status = create_nls_environment(env_name)
+        progress.update(task, completed=100)
+        time.sleep(0.5)  # Allow a moment for the spinner to complete visually
+        # return
     
+    if status == 0:
+        # console.print(f"[green]NLS environment '{env_name}' created successfully.[/green]")
+        console.print(f"\n")
+    elif status == 1:
+        console.print(f"[bold red]Error:[/bold red] Directory '{env_name}' already exists", style="red")
+    
+
+
     console.print(Panel.fit(
         f"[bold green]NLS environment '{env_name}' created successfully![/bold green]\n\n"
         f"To activate, run:\n"

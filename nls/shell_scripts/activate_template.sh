@@ -58,14 +58,13 @@ NC='\033[0m' # No Color
 
 # Print stylized activation message
 echo -e "\n${GREEN}┌────────────────────────────────────────────┐${NC}"
-echo -e "${GREEN}│${NC}                                            ${GREEN}│${NC}"
-echo -e "${GREEN}│${NC}   ${YELLOW}NLS environment activated successfully${NC}   ${GREEN}│${NC}"
-echo -e "${GREEN}│${NC}                                            ${GREEN}│${NC}"
+echo -e "${GREEN}│                                            │${NC}"
+echo -e "${GREEN}│   ${YELLOW}NLS environment activated successfully${NC}   ${GREEN}│${NC}"
+echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}├────────────────────────────────────────────┤${NC}"
-echo -e "${GREEN}│${NC}                                            ${GREEN}│${NC}"
+echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}│${NC}   Environment: ${CYAN}{{ENV_NAME}}${NC}                     ${GREEN}│${NC}"
-echo -e "${GREEN}│${NC}   You can now use: ${CYAN}git autocommit${NC}            ${GREEN}│${NC}"
-echo -e "${GREEN}│${NC}   To end the session, type: ${CYAN}deactivate${NC}          ${GREEN}│${NC}"
-echo -e "${GREEN}│${NC}                                            ${GREEN}│${NC}"
+echo -e "${GREEN}│   ${NC}To end the session, type: ${CYAN}remove${NC}       ${GREEN}│${NC}"
+echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}└────────────────────────────────────────────┘${NC}\n"
 

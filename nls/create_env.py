@@ -10,8 +10,7 @@ console = Console()
 
 def create_nls_environment(env_name):
     if os.path.exists(env_name):
-        console.print(f"[bold red]Error:[/bold red] Directory '{env_name}' already exists", style="red")
-        raise typer.Exit(code=1)
+        return 1
 
     os.makedirs(os.path.join(env_name, 'bin'))
     os.makedirs(os.path.join(env_name, 'static'))
@@ -54,12 +53,8 @@ def create_nls_environment(env_name):
     with open(os.path.join(env_name, 'static', 'os_info.json'), 'w', encoding='utf-8') as f:
         f.write(json.dumps(system_info.get_all_info()))
 
-    console.print(f"[green]NLS environment '{env_name}' created successfully.[/green]")
-    
-    if sys.platform == "win32":
-        console.print(f"[yellow]To activate, run: {env_name}\\bin\\activate.bat[/yellow]")
-    else:
-        console.print(f"[yellow]To activate, run: source {env_name}/bin/activate[/yellow]")
+
+    return 0
 
 if __name__ == "__main__":
     typer.run(create_nls_environment)
