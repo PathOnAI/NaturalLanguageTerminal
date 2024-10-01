@@ -9,7 +9,7 @@ INTERCEPTION_ACTIVE=false
 
 # Function to log the command
 log_command() {
-    local cmd="$*"
+    local cmd="$1"
     echo "Command intercepted: $cmd" >> ~/.intercepted_commands.log
 }
 
@@ -20,7 +20,7 @@ intercept_command() {
         local cmd="$BASH_COMMAND"
 
         if [[ -n "$ZSH_VERSION" ]]; then
-            cmd="$*"
+            cmd="$1"
             # trap - DEBUG
         fi
         
@@ -119,13 +119,9 @@ ai_message_generator() {
     # Check if the first line is 'y'
     if [ "$line1_lower" = "y" ]; then
         eval "$line2"
-
-        source /Users/rama2r/NaturalLanguageShell/test.sh
     else
         echo "No command executed"
     fi
-
-
 
     return 0
 }
