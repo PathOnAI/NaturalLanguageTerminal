@@ -82,7 +82,7 @@ show_last_intercepted() {
 # Alias to show last intercepted command
 alias last_intercepted='show_last_intercepted'
 
-# zsh specific handler with GPT-4 integration and visible curl progress
+# zsh specific handler 
 command_not_found_handler() {
     if $INTERCEPTION_ACTIVE; then
         ai_message_generator "$*"
@@ -118,19 +118,9 @@ ai_message_generator() {
 
     # Check if the first line is 'y'
     if [ "$line1_lower" = "y" ]; then
-        echo "$line2"
+        eval "$line2"
 
-        # Create a temporary file
-        temp_file=$(mktemp)
-        
-        # Write the command to the temporary file
-        echo "$line2" > "$temp_file"
-        
-        # Source the temporary file in the current shell
-        source "$temp_file"
-        
-        # Remove the temporary file
-        rm "$temp_file"
+        source /Users/rama2r/NaturalLanguageShell/test.sh
     else
         echo "No command executed"
     fi

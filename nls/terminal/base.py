@@ -52,8 +52,8 @@ def write_to_file(user_choice: str, generated_command: str):
         f.write(f"{user_choice}\n{parse_ai_response_for_bash_and_zsh(generated_command)}")
 
 def main(command: str):
-    api_url = os.getenv('API_URL')
-    api_key = os.getenv('API_KEY')
+    api_url = 'https://api.openai.com/v1/chat/completions'
+    api_key = os.getenv('OPENAI_API_KEY')
 
     if not api_url or not api_key:
         console.print("[bold red]Error:[/bold red] API_URL and API_KEY must be set as environment variables")
