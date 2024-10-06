@@ -1,7 +1,7 @@
 # Natural Language Terminal (NLT)
 
 <p align="center">
-  <img src="nlt.png" width="60%" alt="nlt-logo">
+  <img src="https://github.com/PathOnAI/NaturalLanguageTerminal/blob/main/nlt.png" width="60%" alt="nlt-logo">
 </p>
 
 <p align="center">
