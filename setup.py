@@ -6,7 +6,7 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(
-    name='nls',
+    name='nlt',
     version='0.2.0',
     packages=find_packages(),
     long_description=open('README.md').read(),
