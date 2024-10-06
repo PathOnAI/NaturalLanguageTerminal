@@ -17,6 +17,7 @@
   <a href="#-features">Features</a> •
   <a href="#-installation">Installation</a> •
   <a href="#-usage">Usage</a> •
+  <a href="#-plugins">Plugins</a> •
   <a href="#-contributing">Contributing</a> •
   <a href="#-license">License</a>
 </p>
@@ -36,17 +37,19 @@ NLT is a groundbreaking tool that allows you to interact with your terminal usin
 
 ## 📦 Installation
 
+```bash
+python -m pip install natural-language-terminal
+```
+
 ### macOS
 
 ```bash
-python -m pip install nlt
 @nlt init
 ```
 
 ### Windows
 
 ```powershell
-python -m pip install nlt
 nlt init
 ```
 
@@ -77,7 +80,7 @@ source my_awesome_project/bin/activate
 #### Windows
 
 ```powershell
-cd my_awesome_project/bin
+cd my_awesome_project/Scripts
 activate.bat
 ```
 
@@ -97,13 +100,36 @@ remove -c
 
 or
 
-```bash
+<!-- ```bash
 remove --clean
-```
+``` -->
 
 ## 🛠️ How It Works
 
 NLT uses natural language processing to interpret your commands and translate them into powerful terminal operations. This abstraction layer allows you to focus on your intentions rather than syntax.
+
+## 🔌 Plugins
+
+NLT supports plugins to extend its functionality with additional commands. These plugins are provided by different providers, enhancing your NLT experience with specialized features.
+
+### Available Providers
+
+Currently, NLT supports the following plugin provider:
+
+#### Git Provider
+
+The Git provider adds Git-related functionality to your NLT session.
+
+Available commands:
+
+- `git autocommit`: Automatically generates a commit message and commits changes.
+
+Usage:
+```bash
+git autocommit
+```
+
+This command analyzes your changes, generates an appropriate commit message, and creates a new commit.
 
 ## 🤝 Contributing
 
@@ -129,3 +155,5 @@ A big thank you to all our contributors and supporters who help make NLT better 
 <p align="center">
   <em>"Speak to your terminal, and it shall listen."</em>
 </p>
+
+
