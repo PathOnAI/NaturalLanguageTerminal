@@ -1,5 +1,12 @@
 # setup.py
 from setuptools import setup, find_packages
+import codecs
+import os
+
+here = os.path.abspath(os.path.dirname(__file__))
+
+with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
+    long_description = "\\n" + fh.read()
 
 # Read the contents of requirements.txt
 with open('requirements.txt') as f:
@@ -7,9 +14,9 @@ with open('requirements.txt') as f:
 
 setup(
     name='natural-language-terminal',
-    version='0.1.0',
+    version='{{VERSION_PLACEHOLDER}}',
     packages=find_packages(),
-    long_description=open('README.md').read(),
+    long_description=long_description,
     long_description_content_type='text/markdown',
     include_package_data=True,
     author='Balaji Rama',
