@@ -1,23 +1,14 @@
 @echo off
-setlocal enabledelayedexpansion
+setlocal EnableDelayedExpansion
 
-echo Method 1: Caret Escaping
-echo This is an exclamation mark: ^!
+:: Define the escape character
+for /F %%a in ('echo prompt $E ^| cmd') do set "ESC=%%a"
 
-echo.
-echo Method 2: Delayed Expansion with Caret
-set "message=This is an exclamation mark: ^!"
-echo !message!
+:: Set the colored prefix
+set "GREEN_PREFIX=%ESC%[32m(prefix)%ESC%[0m"
 
-echo.
-echo Method 3: Immediate Expansion
-set "message=This is an exclamation mark: !"
-echo %message%
+:: Modify the prompt
+prompt %GREEN_PREFIX% $P$G
 
-echo.
-echo Method 4: Using Special Character Code
-echo This is an exclamation mark: ^^!
-
-echo.
-echo Method 5: Echo without quotes
-echo This is an exclamation mark: !
+:: Start a new command prompt session
+cmd /k
