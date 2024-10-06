@@ -12,3 +12,6 @@ session
 
 test.sh   
 test.bat
+
+test1.bat
+setup_git_alias.bat
