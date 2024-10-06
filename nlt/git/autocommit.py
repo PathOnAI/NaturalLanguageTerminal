@@ -6,7 +6,7 @@ from rich.console import Console
 from rich.panel import Panel
 from rich.progress import Progress, SpinnerColumn, TextColumn
 
-from nls.prompts import AUTOCOMMIT_ASSISTANT_PROMPT, AUTOCOMMIT_SYSTEM_PROMPT
+from nlt.prompts import AUTOCOMMIT_ASSISTANT_PROMPT, AUTOCOMMIT_SYSTEM_PROMPT
 
 console = Console()
 client = OpenAI()

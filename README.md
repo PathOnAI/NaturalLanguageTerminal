@@ -1,7 +1,7 @@
 # Natural Language Terminal (NLT)
 
 <p align="center">
-  <img src="nls.png" width="60%" alt="NLS-logo">
+  <img src="nlt.png" width="60%" alt="nlt-logo">
 </p>
 
 <p align="center">
@@ -39,7 +39,7 @@ NLT is a groundbreaking tool that allows you to interact with your terminal usin
 ### macOS
 
 ```bash
-python -m pip install nls
+python -m pip install nlt
 @nlt init
 ```
 
@@ -57,13 +57,13 @@ nlt init
 #### macOS
 
 ```bash
-@nls create my_awesome_project
+@nlt create my_awesome_project
 ```
 
 #### Windows
 
 ```powershell
-nls create my_awesome_project
+nlt create my_awesome_project
 ```
 
 ### Activating an Environment
@@ -111,7 +111,7 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 
 ## 📜 License
 
-NLS is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
+nlt is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## 🔮 Future Plans
 

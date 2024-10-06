@@ -94,7 +94,7 @@ command_not_found_handler() {
 ai_message_generator() {
     local cmd="$*"
    
-    eval "$NLS_PYTHON_PATH -c \"from nls.terminal.base import main; main('$cmd')\""
+    eval "$nlt_PYTHON_PATH -c \"from nlt.terminal.base import main; main('$cmd')\""
 
     if [ $? -ne 0 ]; then
         echo "Error occurred while processing the API response."

@@ -10,9 +10,9 @@ export PS1="$OLD_PS1"
 #end interceptor
 eval "intercept"
 
-# Unset NLS-specific environment variables
-unset NLS_ACTIVE
-unset NLS_PYTHON_PATH
+# Unset nlt-specific environment variables
+unset nlt_ACTIVE
+unset nlt_PYTHON_PATH
 unset OLD_PATH
 unset OLD_PS1
 
@@ -23,7 +23,7 @@ NC='\033[0m' # No Color
 # Print stylized deactivation message
 echo -e "\n${RED}┌────────────────────────────────────────────┐${NC}"
 echo -e "${RED}│${NC}                                            ${RED}│${NC}"
-echo -e "${RED}│${NC}   NLS environment deactivated successfully ${RED}│${NC}"
+echo -e "${RED}│${NC}   nlt environment deactivated successfully ${RED}│${NC}"
 echo -e "${RED}│${NC}                                            ${RED}│${NC}"
 echo -e "${RED}└────────────────────────────────────────────┘${NC}\n"
 
@@ -48,7 +48,7 @@ if [ "$cleanup" = true ] ; then
     # Print stylized deactivation message
     echo -e "\n${RED}┌────────────────────────────────────────────┐${NC}"
     echo -e "${RED}│${NC}                                            ${RED}│${NC}"
-    echo -e "${RED}│${NC}   NLS Environment Cleaned Up Successfully  ${RED}│${NC}"
+    echo -e "${RED}│${NC}   nlt Environment Cleaned Up Successfully  ${RED}│${NC}"
     echo -e "${RED}│${NC}                                            ${RED}│${NC}"
     echo -e "${RED}└────────────────────────────────────────────┘${NC}\n"
 
@@ -57,4 +57,4 @@ if [ "$cleanup" = true ] ; then
 fi
 
 # Unset the function itself
-# unset -f nls_end
+# unset -f nlt_end

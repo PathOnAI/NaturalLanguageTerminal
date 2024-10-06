@@ -4,11 +4,11 @@ import typer
 import json
 from rich.console import Console
 
-from nls.core.system import SystemInfo
+from nlt.core.system import SystemInfo
 
 console = Console()
 
-def create_nls_environment(env_name):
+def create_nlt_environment(env_name):
     if os.path.exists(env_name):
         return 1
 
@@ -20,13 +20,13 @@ def create_nls_environment(env_name):
     if sys.platform == "win32":
         scripts = [
             ('activate_template.bat', 'activate.bat'),
-            ('end_template.bat', 'nls_end.bat'),
-            # ('nls_interceptor.bat', 'nls_interceptor.bat')
+            ('end_template.bat', 'nlt_end.bat'),
+            # ('nlt_interceptor.bat', 'nlt_interceptor.bat')
         ]
     else:
         scripts = [
             ('activate_template.sh', 'activate'),
-            ('end_template.sh', 'nls_end'),
+            ('end_template.sh', 'nlt_end'),
             ('interceptor.sh', 'interceptor.sh'),
             ('env_setter.sh', 'env_setter.sh')
         ]
@@ -57,4 +57,4 @@ def create_nls_environment(env_name):
     return 0
 
 if __name__ == "__main__":
-    typer.run(create_nls_environment)
+    typer.run(create_nlt_environment)

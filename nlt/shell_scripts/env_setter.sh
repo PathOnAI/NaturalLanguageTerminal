@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Path to the config file
-CONFIG_FILE="$HOME/.nlsconfig.json"
+CONFIG_FILE="$HOME/.nltconfig.json"
 
 # Check if the config file exists
 if [ ! -f "$CONFIG_FILE" ]; then

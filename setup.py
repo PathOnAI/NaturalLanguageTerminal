@@ -18,11 +18,11 @@ setup(
     install_requires=required,
     entry_points={
         "console_scripts": [
-            "@nls=nls.cli.app:app",
+            "@nlt=nlt.cli.app:app",
         ],
     },
     package_data={
-        'nls': [
+        'nlt': [
             'shell_scripts/*.sh',
             'shell_scripts/*.bat'
         ],

@@ -8,8 +8,8 @@ from rich.panel import Panel
 from rich.syntax import Syntax
 from rich.text import Text
 
-from nls.prompts import TERMINAL_COMMAND_ASSISTANT_PROMPT
-from nls.terminal.utils import parse_ai_response_for_bash_and_zsh
+from nlt.prompts import TERMINAL_COMMAND_ASSISTANT_PROMPT
+from nlt.terminal.utils import parse_ai_response_for_bash_and_zsh
 
 from dotenv import load_dotenv
 
@@ -18,7 +18,7 @@ load_dotenv()
 console = Console()
 
 def format_response(content: str) -> Panel:
-    title = Text("NLS Suggestion", style="bold magenta")
+    title = Text("nlt Suggestion", style="bold magenta")
     syntax = Syntax(content, "markdown", theme="monokai", line_numbers=True)
     return Panel(syntax, title=title, expand=False, border_style="green")
 

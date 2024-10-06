@@ -12,25 +12,25 @@ export PATH="$FILE_DIR:$PATH"
 
 # Save the current Python interpreter path
 if command -v python &> /dev/null; then
-    export NLS_PYTHON_PATH=$(which python)
+    export nlt_PYTHON_PATH=$(which python)
 elif command -v python3 &> /dev/null; then
-    export NLS_PYTHON_PATH=$(which python3)
+    export nlt_PYTHON_PATH=$(which python3)
 else
     echo "Error: Neither python nor python3 found in PATH"
     exit 1
 fi
 
 # Create the git-autocommit alias using the full path to Python
-git config --global alias.autocommit "!$NLS_PYTHON_PATH -c \"from nls.git.autocommit import main; main()\""
+git config --global alias.autocommit "!$nlt_PYTHON_PATH -c \"from nlt.git.autocommit import main; main()\""
 
-alias remove="source $FILE_DIR/nls_end"
+alias remove="source $FILE_DIR/nlt_end"
 
 source "$FILE_DIR/interceptor.sh"
 
 eval "intercept"
 
-# Set a flag to indicate NLS is active
-export NLS_ACTIVE=1
+# Set a flag to indicate nlt is active
+export nlt_ACTIVE=1
 
 source "$FILE_DIR/env_setter.sh"
 
@@ -40,14 +40,14 @@ if [ -n "$BASH_VERSION" ]; then
     reset_color="\[\e[0m\]"
     
     # Modify PS1 for Bash
-    export PS1="${navy_blue}[nls~{{ENV_NAME}}]${reset_color} $PS1"
+    export PS1="${navy_blue}[nlt~{{ENV_NAME}}]${reset_color} $PS1"
 elif [ -n "$ZSH_VERSION" ]; then
     # Navy blue color code for Zsh
     navy_blue="%F{17}"
     reset_color="%f"
     
     # Modify PROMPT for Zsh
-    export PROMPT="${navy_blue}[nls~{{ENV_NAME}}]${reset_color} $PROMPT"
+    export PROMPT="${navy_blue}[nlt~{{ENV_NAME}}]${reset_color} $PROMPT"
 fi
 
 # ANSI color codes
@@ -59,7 +59,7 @@ NC='\033[0m' # No Color
 # Print stylized activation message
 echo -e "\n${GREEN}┌────────────────────────────────────────────┐${NC}"
 echo -e "${GREEN}│                                            │${NC}"
-echo -e "${GREEN}│   ${YELLOW}NLS environment activated successfully${NC}   ${GREEN}│${NC}"
+echo -e "${GREEN}│   ${YELLOW}nlt environment activated successfully${NC}   ${GREEN}│${NC}"
 echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}├────────────────────────────────────────────┤${NC}"
 echo -e "${GREEN}│                                            │${NC}"
