@@ -16,4 +16,15 @@ setup(
     author_email='balajirw10@gmail.com',
     python_requires='>=3.6',
     install_requires=required,
+    entry_points={
+        "console_scripts": [
+            "@nls=nls.cli.app:app",
+        ],
+    },
+    package_data={
+        'nls': [
+            'shell_scripts/*.sh',
+            'shell_scripts/*.bat'
+        ],
+    },
 )
