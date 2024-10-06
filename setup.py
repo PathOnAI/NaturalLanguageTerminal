@@ -6,8 +6,8 @@ with open('requirements.txt') as f:
     required = f.read().splitlines()
 
 setup(
-    name='nlt',
-    version='0.2.0',
+    name='natural-language-terminal',
+    version='0.1.0',
     packages=find_packages(),
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -22,7 +22,7 @@ setup(
         ],
     },
     package_data={
-        'nlt': [
+        'pynlt': [
             'shell_scripts/*.sh',
             'shell_scripts/*.bat'
         ],

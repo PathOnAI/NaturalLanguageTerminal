@@ -4,7 +4,7 @@ __pycache__
 .env
 
 node_modules
-nlt.egg-info
+natural_language_terminal.egg-info
 
 myenv
 test3
