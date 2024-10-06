@@ -1,81 +1,89 @@
+# Natural Language Terminal (NLT)
+
 <p align="center">
   <img src="nls.png" width="60%" alt="NLS-logo">
 </p>
+
 <p align="center">
-    <h1 align="center">Natural Language Shell</h1>
+  <strong>Welcome to the future of command-line interfaces.</strong>
 </p>
+
 <p align="center">
-	<!-- local repository, no metadata badges. --></p>
+  Natural Language Terminal (NLT) revolutionizes the way you interact with your system, bringing the power of natural language processing to your fingertips.
+</p>
 
-<br>
+<p align="center">
+  <a href="#-overview">Overview</a> •
+  <a href="#-features">Features</a> •
+  <a href="#-installation">Installation</a> •
+  <a href="#-usage">Usage</a> •
+  <a href="#-contributing">Contributing</a> •
+  <a href="#-license">License</a>
+</p>
 
-Welcome to the future of command-line interfaces. Natural Language Terminal (NLT) revolutionizes the way you interact with your system, bringing the power of natural language processing to your fingertips.
+---
 
-<details><summary>Table of Contents</summary>
+## 🌟 Overview
 
-- [📍 Overview](#-overview)
-- [👾 Features](#-features)
-- [📂 Repository Structure](#-repository-structure)
-- [🧩 Modules](#-modules)
-- [🚀 Getting Started](#-getting-started)
-    - [🔖 Prerequisites](#-prerequisites)
-    - [📦 Installation](#-installation)
-    - [🤖 Usage](#-usage)
-    - [🧪 Tests](#-tests)
-- [📌 Project Roadmap](#-project-roadmap)
-- [🤝 Contributing](#-contributing)
-- [🎗 License](#-license)
-- [🙌 Acknowledgments](#-acknowledgments)
-
-</details>
-
+NLT is a groundbreaking tool that allows you to interact with your terminal using natural language. Say goodbye to complex command syntaxes and hello to intuitive, conversational computing.
 
 ## 🚀 Features
 
-- **Intuitive Commands**: Interact with your terminal using natural language
-- **Smart Environment Management**: Create and manage virtual environments effortlessly
-- **Cross-Platform**: Designed for seamless operation on various operating systems (macOS support available now, Windows coming soon)
-- **Lightweight**: Minimal overhead, maximum performance
+- **🗣️ Intuitive Commands**: Interact with your terminal using natural language
+- **🧠 Smart Environment Management**: Create and manage virtual environments effortlessly
+- **🌐 Cross-Platform**: Seamless operation on macOS and Windows
+- **🪶 Lightweight**: Minimal overhead, maximum performance
 
-## 🛠 Installation
+## 📦 Installation
 
-Getting started with NLT is as simple as speaking your mind. Install it using pip:
+### macOS
 
 ```bash
-python -m pip install nlt
+python -m pip install nls
+@nlt init
 ```
 
-## 🌟 Quick Start
+### Windows
 
-After installation, initialize NLT globally on your device:
-
-```bash
-@nls init
+```powershell
+python -m pip install nlt
+nlt init
 ```
 
 ## 🔮 Usage
 
 ### Creating a New Environment
 
-Create a new environment as easily as describing it:
+#### macOS
 
 ```bash
-@cls create my_awesome_project
+@nls create my_awesome_project
 ```
 
-This creates a new folder in your current directory.
+#### Windows
+
+```powershell
+nls create my_awesome_project
+```
 
 ### Activating an Environment
 
-Activate your new environment with a simple source command:
+#### macOS
 
 ```bash
-source bin/my_awesome_project
+source my_awesome_project/bin/activate
+```
+
+#### Windows
+
+```powershell
+cd my_awesome_project/bin
+activate.bat
 ```
 
 ### Deactivating and Cleaning Up
 
-To deactivate your current environment:
+For both macOS and Windows:
 
 ```bash
 remove
@@ -93,9 +101,9 @@ or
 remove --clean
 ```
 
-## 🔧 How It Works
+## 🛠️ How It Works
 
-NLT leverages cutting-edge natural language processing to interpret your commands and translate them into powerful terminal operations. It creates a layer of abstraction that allows you to focus on your intentions rather than syntax.
+NLT uses natural language processing to interpret your commands and translate them into powerful terminal operations. This abstraction layer allows you to focus on your intentions rather than syntax.
 
 ## 🤝 Contributing
 
@@ -103,16 +111,21 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 
 ## 📜 License
 
-NLT is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
+NLS is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 🌈 Future Plans
+## 🔮 Future Plans
 
-- Windows support
-- Advanced AI-driven command predictions
-- Integration with popular development tools and frameworks
+- 🖥️ Enhanced Windows support
+- 🧠 Advanced AI-driven command predictions
+- 🔗 Integration with popular development tools and frameworks
+- 🌐 Multi-language support
 
-Join us in shaping the future of command-line interfaces!
+## 🙏 Acknowledgments
+
+A big thank you to all our contributors and supporters who help make NLT better every day.
 
 ---
 
-"Speak to your terminal, and it shall listen." - NLT Team
+<p align="center">
+  <em>"Speak to your terminal, and it shall listen."</em>
+</p>
