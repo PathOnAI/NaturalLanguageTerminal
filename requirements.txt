@@ -1,0 +1,4 @@
+openai
+typer
+rich
+python-dotenv

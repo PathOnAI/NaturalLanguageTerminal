@@ -1,24 +1,19 @@
+# setup.py
 from setuptools import setup, find_packages
 
+# Read the contents of requirements.txt
+with open('requirements.txt') as f:
+    required = f.read().splitlines()
+
 setup(
-    name="nls",
-    version="0.2.0",
+    name='nls',
+    version='0.2.0',
     packages=find_packages(),
-    install_requires=[
-        "openai",
-        "typer[all]",
-        "rich",
-        "python-dotenv"
-    ],
-    entry_points={
-        "console_scripts": [
-            "@nls=nls.cli.app:app",
-        ],
-    },
-    package_data={
-        'nls': [
-            'shell_scripts/*.sh',
-            'shell_scripts/*.bat'
-        ],
-    },
+    long_description=open('README.md').read(),
+    long_description_content_type='text/markdown',
+    include_package_data=True,
+    author='Balaji Rama',
+    author_email='balajirw10@gmail.com',
+    python_requires='>=3.6',
+    install_requires=required,
 )
