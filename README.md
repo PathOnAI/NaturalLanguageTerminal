@@ -24,6 +24,8 @@
 
 ---
 
+<h2>Note: Windows compatibility is still under development, so instructions & usage are unstable</h2>
+
 ## 🌟 Overview
 
 NLT is a groundbreaking tool that allows you to interact with your terminal using natural language. Say goodbye to complex command syntaxes and hello to intuitive, conversational computing.
