@@ -23,10 +23,13 @@ def format_response(content: str) -> Panel:
     return Panel(syntax, title=title, expand=False, border_style="green")
 
 def make_prompt(cmd: str):
+    print(cmd)
     return TERMINAL_COMMAND_ASSISTANT_PROMPT % cmd
 
 def make_api_request(cmd: str, api_url: str, api_key: str) -> dict:
     prompt = make_prompt(cmd)
+
+    print(prompt)
 
     headers = {
         "Content-Type": "application/json",

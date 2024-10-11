@@ -4,7 +4,7 @@ import typer
 import json
 from rich.console import Console
 
-from nlt.core.system import SystemInfo
+from natural_language_terminal.core.system import SystemInfo
 
 console = Console()
 

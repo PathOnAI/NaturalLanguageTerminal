@@ -22,14 +22,15 @@ setup(
     author='Balaji Rama',
     author_email='balajirw10@gmail.com',
     python_requires='>=3.6',
+    py_modules=['nlt'],  # Add this line
     install_requires=required,
     entry_points={
         "console_scripts": [
-            "@nlt=nlt.cli.app:app",
+            "@nlt=natural-language-terminal.cli.app:app",
         ],
     },
     package_data={
-        'pynlt': [
+        'natural-language-terminal': [
             'shell_scripts/*.sh',
             'shell_scripts/*.bat'
         ],
