@@ -9,7 +9,7 @@ with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
 
 setup(
     name='natural_language_terminal',
-    version='0.1.8',  # Increment the version number
+    version='0.1.9',  # Increment the version number
     packages=[
         'natural_language_terminal',
         'natural_language_terminal.cli',

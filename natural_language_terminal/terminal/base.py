@@ -8,8 +8,8 @@ from rich.panel import Panel
 from rich.syntax import Syntax
 from rich.text import Text
 
-from nlt.prompts import TERMINAL_COMMAND_ASSISTANT_PROMPT
-from nlt.terminal.utils import parse_ai_response_for_bash_and_zsh
+from natural_language_terminal.prompts import TERMINAL_COMMAND_ASSISTANT_PROMPT
+from natural_language_terminal.terminal.utils import parse_ai_response_for_bash_and_zsh
 
 from dotenv import load_dotenv
 
@@ -28,8 +28,6 @@ def make_prompt(cmd: str):
 
 def make_api_request(cmd: str, api_url: str, api_key: str) -> dict:
     prompt = make_prompt(cmd)
-
-    print(prompt)
 
     headers = {
         "Content-Type": "application/json",
