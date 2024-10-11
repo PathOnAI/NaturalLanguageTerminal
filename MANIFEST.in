@@ -1,0 +1,3 @@
+include README.md
+recursive-include natural_language_terminal *
+recursive-include natural_language_terminal/shell_scripts *
