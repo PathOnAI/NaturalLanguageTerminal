@@ -46,7 +46,7 @@ python -m pip install natural-language-terminal
 ### macOS
 
 ```bash
-@nlt init
+nlt init
 ```
 
 ### Windows
@@ -62,7 +62,7 @@ nlt init
 #### macOS
 
 ```bash
-@nlt create my_awesome_project
+nlt create my_awesome_project
 ```
 
 #### Windows
