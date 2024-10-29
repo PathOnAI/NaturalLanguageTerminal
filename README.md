@@ -1,8 +1,5 @@
 # Natural Language Terminal (NLT)
-
-<p align="center">
-  <img src="https://github.com/PathOnAI/NaturalLanguageTerminal/blob/main/nlt.png" width="60%" alt="nlt-logo">
-</p>
+repo owner: Balaji Rama (balajirw10@gmail.com)
 
 <p align="center">
   <strong>Welcome to the future of command-line interfaces.</strong>
@@ -26,18 +23,18 @@
 
 <h2>Note: Windows compatibility is still under development, so instructions & usage are unstable</h2>
 
-## 🌟 Overview
+## 🌟 1. Overview
 
 NLT is a groundbreaking tool that allows you to interact with your terminal using natural language. Say goodbye to complex command syntaxes and hello to intuitive, conversational computing.
 
-## 🚀 Features
+## 🚀 2. Features
 
 - **🗣️ Intuitive Commands**: Interact with your terminal using natural language
 - **🧠 Smart Environment Management**: Create and manage virtual environments effortlessly
 - **🌐 Cross-Platform**: Seamless operation on macOS and Windows
 - **🪶 Lightweight**: Minimal overhead, maximum performance
 
-## 📦 Installation
+## 📦 3. Installation
 
 ```bash
 python -m pip install natural-language-terminal
@@ -55,7 +52,7 @@ nlt init
 nlt init
 ```
 
-## 🔮 Usage
+## 🔮 4. Usage
 
 ### Creating a New Environment
 
@@ -106,51 +103,23 @@ or
 remove --clean
 ``` -->
 
-## 🛠️ How It Works
 
-NLT uses natural language processing to interpret your commands and translate them into powerful terminal operations. This abstraction layer allows you to focus on your intentions rather than syntax.
-
-## 🔌 Plugins
-
-NLT supports plugins to extend its functionality with additional commands. These plugins are provided by different providers, enhancing your NLT experience with specialized features.
-
-### Available Providers
-
-Currently, NLT supports the following plugin provider:
-
-#### Git Provider
-
-The Git provider adds Git-related functionality to your NLT session.
-
-Available commands:
-
-- `git autocommit`: Automatically generates a commit message and commits changes.
-
-Usage:
-```bash
-git autocommit
-```
-
-This command analyzes your changes, generates an appropriate commit message, and creates a new commit.
-
-## 🤝 Contributing
+## 🤝 5. Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
 
-## 📜 License
+[![NaturalLanguageTerminal contributors](https://contrib.rocks/image?repo=PathOnAI/NaturalLanguageTerminal)](https://github.com/PathOnAI/NaturalLanguageTerminal/graphs/contributors)
 
-nlt is released under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 🔮 Future Plans
-
-- 🖥️ Enhanced Windows support
-- 🧠 Advanced AI-driven command predictions
-- 🔗 Integration with popular development tools and frameworks
-- 🌐 Multi-language support
-
-## 🙏 Acknowledgments
-
-A big thank you to all our contributors and supporters who help make NLT better every day.
+## 6. Citing NLT
+```
+@misc{rama2024natural,
+  title={Natural Language Terminal (NLT)},
+  author={Rama, Balaji and Zhang, Danqing},
+  journal={https://github.com/PathOnAI/NaturalLanguageTerminal},
+  year={2024}
+}
+```
 
 ---
 
