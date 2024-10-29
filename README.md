@@ -34,8 +34,22 @@ NLT is a groundbreaking tool that allows you to interact with your terminal usin
 - **🌐 Cross-Platform**: Seamless operation on macOS and Windows
 - **🪶 Lightweight**: Minimal overhead, maximum performance
 
-## 📦 3. Installation
+## 📦 3. Get Started
+### 3.1 prerequisite
+Install Xcode from the Mac App Store:
 
+Open the Mac App Store
+Search for "Xcode"
+Click "Get" or "Install"
+The download might take a while as Xcode is a large application (several GB)
+
+
+Once Xcode is fully installed, then try running the command again:
+```bash
+sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
+```
+
+### 3.2 Installation
 ```bash
 python -m pip install natural-language-terminal
 ```
@@ -52,38 +66,38 @@ nlt init
 nlt init
 ```
 
-## 🔮 4. Usage
+### 3.3 Usage
 
-### Creating a New Environment
+#### Creating a New Environment
 
-#### macOS
+##### macOS
 
 ```bash
 nlt create my_awesome_project
 ```
 
-#### Windows
+##### Windows
 
 ```powershell
 nlt create my_awesome_project
 ```
 
-### Activating an Environment
+#### Activating an Environment
 
-#### macOS
+##### macOS
 
 ```bash
 source my_awesome_project/bin/activate
 ```
 
-#### Windows
+##### Windows
 
 ```powershell
 cd my_awesome_project/Scripts
 activate.bat
 ```
 
-### Deactivating and Cleaning Up
+#### Deactivating and Cleaning Up
 
 For both macOS and Windows:
 
@@ -104,14 +118,14 @@ remove --clean
 ``` -->
 
 
-## 🤝 5. Contributing
+## 🤝 4. Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
 
 [![NaturalLanguageTerminal contributors](https://contrib.rocks/image?repo=PathOnAI/NaturalLanguageTerminal)](https://github.com/PathOnAI/NaturalLanguageTerminal/graphs/contributors)
 
 
-## 6. Citing NLT
+## 5. Citing NLT
 ```
 @misc{rama2024natural,
   title={Natural Language Terminal (NLT)},
