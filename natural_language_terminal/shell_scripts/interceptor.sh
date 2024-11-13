@@ -84,10 +84,23 @@ alias last_intercepted='show_last_intercepted'
 
 # zsh specific handler 
 command_not_found_handler() {
+    # Add a guard against recursion
+    if [[ -n "$IN_COMMAND_HANDLER" ]]; then
+        echo "zsh: command not found: $*"
+        return 1
+    fi
+    
+    export IN_COMMAND_HANDLER=1
+    
     if $INTERCEPTION_ACTIVE; then
         ai_message_generator "$*"
+        local result=$?
+        unset IN_COMMAND_HANDLER
+        return $result
     else
         echo "zsh: command not found: $*"
+        unset IN_COMMAND_HANDLER
+        return 1
     fi
 }
 

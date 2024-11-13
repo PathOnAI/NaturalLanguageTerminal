@@ -50,19 +50,55 @@ sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
 
 ### 3.2 Installation
+This project is developed using Python 3.10. Follow these steps to set up your environment on Mac:
+1. Install Python 3.10 using Homebrew:
+```bash
+brew install python@3.10
+```
+
+2. Link Python 3.10:
+```bash
+brew link python@3.10
+```
+
+3. Add Python aliases to your shell configuration:
+```bash
+echo 'alias python="/opt/homebrew/bin/python3.10"' >> ~/.zshrc
+echo 'alias python3="/opt/homebrew/bin/python3.10"' >> ~/.zshrc
+```
+
+4. Apply the changes:
+```bash
+source ~/.zshrc
+```
+
+5. Verify your Python installation:
+```bash
+python --version  # Should show Python 3.10.x
+python3 --version  # Should show Python 3.10.x
+```
+#### Installing Project Dependencies
+
+1. Install the natural-language-terminal package:
 ```bash
 python -m pip install natural-language-terminal
 ```
 
-### macOS
-
+2. Install required system utilities:
 ```bash
-nlt init
+python -m pip install psutil
 ```
 
-### Windows
+#### Troubleshooting
 
-```powershell
+If you encounter any module-related errors, try reinstalling the packages:
+```bash
+python -m pip uninstall natural-language-terminal
+python -m pip install natural-language-terminal psutil
+```
+
+#### NL session initialization
+```bash
 nlt init
 ```
 
@@ -70,32 +106,19 @@ nlt init
 
 #### Creating a New Environment
 
-##### macOS
 
 ```bash
 nlt create my_awesome_project
 ```
 
-##### Windows
-
-```powershell
-nlt create my_awesome_project
-```
 
 #### Activating an Environment
 
-##### macOS
 
 ```bash
 source my_awesome_project/bin/activate
 ```
 
-##### Windows
-
-```powershell
-cd my_awesome_project/Scripts
-activate.bat
-```
 
 #### Deactivating and Cleaning Up
 
@@ -124,16 +147,6 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 
 [![NaturalLanguageTerminal contributors](https://contrib.rocks/image?repo=PathOnAI/NaturalLanguageTerminal)](https://github.com/PathOnAI/NaturalLanguageTerminal/graphs/contributors)
 
-
-## 5. Citing NLT
-```
-@misc{rama2024natural,
-  title={Natural Language Terminal (NLT)},
-  author={Rama, Balaji and Zhang, Danqing},
-  journal={https://github.com/PathOnAI/NaturalLanguageTerminal},
-  year={2024}
-}
-```
 
 ---
 
