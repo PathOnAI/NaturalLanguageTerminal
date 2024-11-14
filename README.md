@@ -99,7 +99,9 @@ After running this command, a folder called newEnv will be created. We have uplo
 ```bash
 source newEnv/bin/activate
 ```
-![alt text](assets/image.png)
+<p align="center">
+  <img src="assets/image.png"/>
+</p>
 
 
 ### 2.4 Deactivating 
@@ -109,12 +111,15 @@ For both macOS and Windows:
 ```bash
 remove
 ```
-![alt text](assets/image-2.png)
+<p align="center">
+  <img src="assets/image-2.png"/>
+</p>
 
 ### 2.5 get NLT suggestions
 Now you can chat with the terminal to receive command suggestions and choose whether to run them.
-![alt text](assets/image-1.png)
-
+<p align="center">
+  <img src="assets/image-1.png"/>
+</p>
 
 ## 🤝 4. Contributing
 
