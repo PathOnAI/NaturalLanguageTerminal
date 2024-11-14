@@ -100,7 +100,7 @@ After running this command, a folder called newEnv will be created. We have uplo
 source newEnv/bin/activate
 ```
 <p align="center">
-  <img src="assets/image.png"/>
+  <img src="assets/image.png" width="100%"/>
 </p>
 
 ### 2.4 Deactivating 
@@ -111,17 +111,16 @@ For both macOS and Windows:
 remove
 ```
 <p align="center">
-  <img src="assets/image-2.png"/>
+  <img src="assets/image-2.png" width="100%"/>
 </p>
 
 ### 2.5 get NLT suggestions
 Now you can chat with the terminal to receive command suggestions and choose whether to run them.
 <p align="center">
-  <img src="assets/image-1.png"/>
+  <img src="assets/image-1.png" width="100%"/>
 </p>
 
 
-![alt text](image.png)
 ## 🤝 4. Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
