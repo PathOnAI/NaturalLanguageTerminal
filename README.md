@@ -135,3 +135,6 @@ We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for 
 </p>
 
 
+## Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=PathOnAI/NaturalLanguageTerminal&type=Date)](https://star-history.com/#PathOnAI/NaturalLanguageTerminal&Date)
