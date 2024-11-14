@@ -21,21 +21,10 @@ repo owner: Balaji Rama (balajirw10@gmail.com)
 
 ---
 
-<h2>Note: Windows compatibility is still under development, so instructions & usage are unstable</h2>
+<h2>Note: We currently only support MacOS. Windows compatibility is still under development.</h2>
 
-## 🌟 1. Overview
-
-NLT is a groundbreaking tool that allows you to interact with your terminal using natural language. Say goodbye to complex command syntaxes and hello to intuitive, conversational computing.
-
-## 🚀 2. Features
-
-- **🗣️ Intuitive Commands**: Interact with your terminal using natural language
-- **🧠 Smart Environment Management**: Create and manage virtual environments effortlessly
-- **🌐 Cross-Platform**: Seamless operation on macOS and Windows
-- **🪶 Lightweight**: Minimal overhead, maximum performance
-
-## 📦 3. Get Started
-### 3.1 prerequisite
+## 📦 1. Get Started
+### 1.1 Prerequisite
 Install Xcode from the Mac App Store:
 
 Open the Mac App Store
@@ -49,7 +38,7 @@ Once Xcode is fully installed, then try running the command again:
 sudo xcode-select --switch /Applications/Xcode.app/Contents/Developer
 ```
 
-### 3.2 Installation
+### 1.2 Python Setup
 This project is developed using Python 3.10. Follow these steps to set up your environment on Mac:
 1. Install Python 3.10 using Homebrew:
 ```bash
@@ -77,68 +66,54 @@ source ~/.zshrc
 python --version  # Should show Python 3.10.x
 python3 --version  # Should show Python 3.10.x
 ```
-#### Installing Project Dependencies
+### 1.3 Installing Project Dependencies
 
-1. Install the natural-language-terminal package:
+1. Install the natural-language-terminal package from source:
 ```bash
-python -m pip install natural-language-terminal
+python -m pip install -e .
 ```
 
 2. Install required system utilities:
 ```bash
 python -m pip install psutil
+python -m pip install requests
 ```
 
-#### Troubleshooting
 
-If you encounter any module-related errors, try reinstalling the packages:
-```bash
-python -m pip uninstall natural-language-terminal
-python -m pip install natural-language-terminal psutil
-```
-
-#### NL session initialization
+## 2 Usage
+### 2.1 NL session initialization
 ```bash
 nlt init
 ```
 
-### 3.3 Usage
+### 2.2 Creating a New Environment
 
-#### Creating a New Environment
+```bash
+nlt newEnv
+```
+After running this command, a folder called newEnv will be created. We have uploaded the exampleEnv folder as an example for reference. See the [exampleEnv](./exampleEnv) subfolder.
+
+### 2.3 Activating an Environment
 
 
 ```bash
-nlt create my_awesome_project
+source newEnv/bin/activate
 ```
+![alt text](assets/image.png)
 
 
-#### Activating an Environment
-
-
-```bash
-source my_awesome_project/bin/activate
-```
-
-
-#### Deactivating and Cleaning Up
+### 2.4 Deactivating 
 
 For both macOS and Windows:
 
 ```bash
 remove
 ```
+![alt text](assets/image-2.png)
 
-To remove the environment and clean up:
-
-```bash
-remove -c
-```
-
-or
-
-<!-- ```bash
-remove --clean
-``` -->
+### 2.5 get NLT suggestions
+Now you can chat with the terminal to receive command suggestions and choose whether to run them.
+![alt text](assets/image-1.png)
 
 
 ## 🤝 4. Contributing
