@@ -103,7 +103,6 @@ source newEnv/bin/activate
   <img src="assets/image.png"/>
 </p>
 
-
 ### 2.4 Deactivating 
 
 For both macOS and Windows:
@@ -121,6 +120,8 @@ Now you can chat with the terminal to receive command suggestions and choose whe
   <img src="assets/image-1.png"/>
 </p>
 
+
+![alt text](image.png)
 ## 🤝 4. Contributing
 
 We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to get started.
