@@ -43,14 +43,14 @@ if [ -n "$BASH_VERSION" ]; then
     reset_color="\[\e[0m\]"
     
     # Modify PS1 for Bash
-    export PS1="${navy_blue}[nlt~{{ENV_NAME}}]${reset_color} $PS1"
+    export PS1="${navy_blue}[nlt~exampleEnv]${reset_color} $PS1"
 elif [ -n "$ZSH_VERSION" ]; then
     # Navy blue color code for Zsh
     navy_blue="%F{17}"
     reset_color="%f"
     
     # Modify PROMPT for Zsh
-    export PROMPT="${navy_blue}[nlt~{{ENV_NAME}}]${reset_color} $PROMPT"
+    export PROMPT="${navy_blue}[nlt~exampleEnv]${reset_color} $PROMPT"
 fi
 
 # ANSI color codes
@@ -66,7 +66,7 @@ echo -e "${GREEN}│   ${YELLOW}nlt environment activated successfully${NC}   ${
 echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}├────────────────────────────────────────────┤${NC}"
 echo -e "${GREEN}│                                            │${NC}"
-echo -e "${GREEN}│${NC}   Environment: ${CYAN}{{ENV_NAME}}${NC}                     ${GREEN}│${NC}"
+echo -e "${GREEN}│${NC}   Environment: ${CYAN}exampleEnv${NC}                     ${GREEN}│${NC}"
 echo -e "${GREEN}│   ${NC}To end the session, type: ${CYAN}remove${NC}       ${GREEN}│${NC}"
 echo -e "${GREEN}│                                            │${NC}"
 echo -e "${GREEN}└────────────────────────────────────────────┘${NC}\n"
