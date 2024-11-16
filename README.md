@@ -89,7 +89,7 @@ nlt init
 ### 2.2 Creating a New Environment
 
 ```bash
-nlt newEnv
+nlt create newEnv
 ```
 After running this command, a folder called newEnv will be created. We have uploaded the exampleEnv folder as an example for reference. See the [exampleEnv](./exampleEnv) subfolder.
 
